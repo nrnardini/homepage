@@ -1,0 +1,55 @@
+
+
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-family: 'Press Start 2P';
+    line-height: 1.6;
+    /* footer support */
+    margin-bottom: 100px;
+  }
+
+  .header {
+    padding: 20px 0;
+    margin-left: 10px;
+  }
+  
+  .title {
+    text-align: left;
+    font-size: 30px;
+  }
+
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+  }
