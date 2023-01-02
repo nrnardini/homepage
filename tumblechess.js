@@ -72,7 +72,7 @@ function setup() {
     max: { x: width, y: height }
   };
 
-  board = loadImage('board.png');
+  board = loadImage('./pieces/board.png');
 
   blackrookSprite = loadImage('./pieces/blackrook.png');
   blackknightSprite = loadImage('./pieces/blackknight.png');
