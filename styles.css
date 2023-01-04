@@ -40,41 +40,15 @@
     font-size: 30px;
   }
 
-
-  .footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    gap: 10px;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 15px;
-  }
-
-  .frame {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
-  }
-
   canvas {
-   
-    margin-left: 330px;
+    margin-left: 25px;
     margin-right: auto;
     margin-top: 25px;
     margin-bottom: 25px;
-   
     display: block;
     border: 3px solid #000000;
     }
 
- 
-    /* The sidebar menu */
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 305px; /* Set the width of the sidebar */
@@ -82,46 +56,78 @@
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black */
+  background-color: rgb(0, 0, 0); 
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
-  display:flexbox;
-}
-
-/* The navigation menu links */
-
-.sidenav nname {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 35px;
-  color: #818181;
-  display: flex;
+  display: flexbox;
 }
 
 .sidenav a {
-  padding: 6px 8px 6px 16px;
+  padding: 5px 8px 5px 16px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
 }
 
+.sidenav #nname {
+  font-size: 35px;
+}
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.sidenav #aabout {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #818181;
+  display: flex;
+}
+
+.sidenav a:hover, #nname:hover {
   color: #f1f1f1;
 }
 
-/* Style page content */
-.main {
+
+#main {
   margin-left: 305px; /* Same as the width of the sidebar */
+  margin-top: 35px;
   padding: 0px 10px;
   display: flexbox;
 }
 
+#main.showtv .tv-box {
+  display: block;
+  object-fit: contain;
+}
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-/* @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+
+#content {
+  margin-top: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.tv-content {
+  display: none;
+}
+
+.tv-box {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  display: none;
+  border: 3px solid #000000;
+  object-fit: contain;
+}
+
+img {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  max-width: 98%;
+  max-height: 100%;
+}
+
+#sketch-holder {
 }

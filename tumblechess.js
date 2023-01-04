@@ -59,8 +59,32 @@ let whitekingSprite;
 let whitepawnSprite;
 
 
+const namebutton = document.getElementById("nname");
+const tvbutton = document.getElementById("ttv");
+
+const sketchHolder = document.getElementById("sketch-holder");
+
+
+namebutton.onclick = () => homepage();
+tvbutton.onclick = () => tvpage();
+
+function homepage () {
+  document.getElementById("sketch-holder").style.display = 'block';
+  document.getElementById("main").classList.remove("showtv");
+
+}
+function tvpage () {
+  document.getElementById("sketch-holder").style.display = 'none';
+  document.getElementById("main").classList.add("showtv");
+}
+
+
+
+
+
 function setup() {
   const canvas = createCanvas(500, 500);
+  canvas.parent('sketch-holder');
 
   // create an engine
   const engine = Matter.Engine.create();
@@ -92,8 +116,8 @@ function setup() {
   // create room
 
   ground = new Block(world, { x: 400, y: height+2, w: 810, h: 2, color: 'black' }, {isStatic: true });
-  ceiling = new Block(world, { x: 400, y: -2, w: 810, h: 2, color: 'black' }, {isStatic: true });
-  lwall = new Block(world, { x: -2, y: 400, w: 2, h: 810, color: 'black' }, {isStatic: true });
+  ceiling = new Block(world, { x: 400, y: -25, w: 810, h: 25, color: 'black' }, {isStatic: true });
+  lwall = new Block(world, { x: -25, y: 400, w: 25, h: 810, color: 'black' }, {isStatic: true });
   rwall = new Block(world, { x: width+2, y: 400, w: 2, h: 810, color: 'black' }, {isStatic: true });
 
 
@@ -242,7 +266,8 @@ function setup() {
   engine.world.gravity.y = grav;
 
   // run the engine
-  Matter.Runner.run(engine);
+  setTimeout(() => { Matter.Runner.run(engine); }, 1000);
+ 
 }
 
 function draw() {
@@ -291,7 +316,4 @@ function draw() {
   whitepawn7.draw();
   whitepawn8.draw();
 
-
-
 }
-
